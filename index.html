@@ -3,66 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cotizador de Envíos</title> <!-- Ponemos el título de la página -->
-    <link rel="stylesheet" href="./css/styles.css"> <!-- Enlazamos el archivo de estilos -->
+    <title>Cotizador de Envíos Alfaro</title>
+    <link rel="stylesheet" href="./css/estilosAlfaro.css">
 </head>
 <body>
     <header>
-        <div class="header-content">
-            <video class="video-logo" autoplay loop muted> <!-- Ponemos un video que se reproduce solo, sin sonido y en bucle -->
-                <source src="./assets/videologo.mp4" type="video/mp4"> <!-- Le damos la ruta del video -->
-                Tu navegador no soporta el elemento de video. <!-- Mostramos un mensaje si el navegador no puede reproducir el video -->
+        <div class="encabezado-alfaro">
+            <video class="video-alfaro" autoplay loop muted>
+                <source src="./assets/videologo.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video, pasate a un navegador mas mejor XD.
             </video>
-            <div class="company-name">
-                <h2>Logística y Transporte</h2> <!-- Ponemos el tipo de empresa -->
-                <h3>Alfaro e hijos</h3> <!-- Ponemos el nombre de la empresa -->
+            <div class="nombre-empresa">
+                <h2>Logística y Transporte</h2>
+                <h3>Alfaro e Hijos</h3>
             </div>
         </div>
-        <h1>Cotizador de Envíos</h1> <!-- Ponemos el título principal de la página -->
+        <h1>Cotizador de Envíos Alfaro</h1>
     </header>
     <main>
-        <form id="cotizadorForm">
+        <form id="formularioEnvio">
             <div>
-                <label for="origen">Origen:</label> <!-- Ponemos el texto para el campo de origen -->
-                <input type="text" id="origen" name="origen" required> <!-- Hacemos un campo de texto para que el usuario escriba el origen -->
+                <label for="origenEnvio">Origen:</label>
+                <input type="text" id="origenEnvio" name="origenEnvio" required>
             </div>
             <div>
-                <label for="destino">Destino:</label> <!-- Ponemos el texto para el campo de destino -->
-                <input type="text" id="destino" name="destino" required> <!-- Hacemos un campo de texto para que el usuario escriba el destino -->
+                <label for="destinoEnvio">Destino:</label>
+                <input type="text" id="destinoEnvio" name="destinoEnvio" required>
             </div>
             <div>
-                <label for="dimensiones">Dimensiones (Largo x Ancho x Alto en cm):</label> <!-- Ponemos el texto para el campo de dimensiones -->
-                <input type="text" id="dimensiones" name="dimensiones" placeholder="Ej: 30x20x15" required> <!-- Hacemos un campo de texto para que el usuario escriba las dimensiones del paquete -->
+                <label for="dimensionesPaquete">Dimensiones (Largo x Ancho x Alto en cm):</label>
+                <input type="text" id="dimensionesPaquete" name="dimensionesPaquete" placeholder="Ej: 30x20x15" required>
             </div>
             <div>
-                <label for="peso">Peso (kg):</label> <!-- Ponemos el texto para el campo de peso -->
-                <input type="number" id="peso" name="peso" required> <!-- Hacemos un campo numérico para que el usuario escriba el peso del paquete -->
+                <label for="pesoPaquete">Peso (kg):</label>
+                <input type="number" id="pesoPaquete" name="pesoPaquete" required>
             </div>
             <div>
-                <label for="usuario">Usuario:</label> <!-- Ponemos el texto para el campo de usuario -->
-                <input type="text" id="usuario" name="usuario" required> <!-- Hacemos un campo de texto para que el usuario escriba su nombre -->
+                <label for="nombreUsuario">Usuario:</label>
+                <input type="text" id="nombreUsuario" name="nombreUsuario" required>
             </div>
             <div>
-                <label for="dni">DNI:</label> <!-- Ponemos el texto para el campo de DNI -->
-                <input type="text" id="dni" name="dni" required> <!-- Hacemos un campo de texto para que el usuario escriba su DNI -->
+                <label for="dniUsuario">DNI:</label>
+                <input type="text" id="dniUsuario" name="dniUsuario" required>
             </div>
             <div>
-                <label for="tipoEnvio">Tipo de Envío:</label> <!-- Ponemos el texto para el campo de tipo de envío -->
-                <select id="tipoEnvio" name="tipoEnvio" required> <!-- Hacemos un menú desplegable para que el usuario elija el tipo de envío -->
-                    <option value="expreso">Expreso</option> <!-- Ponemos la opción de envío expreso -->
-                    <option value="urgente">Urgente</option> <!-- Ponemos la opción de envío urgente -->
-                    <option value="normal">Normal</option> <!-- Ponemos la opción de envío normal -->
+                <label for="tipoEnvio">Tipo de Envío:</label>
+                <select id="tipoEnvio" name="tipoEnvio" required>
+                    <option value="expreso">Expreso</option>
+                    <option value="urgente">Urgente</option>
+                    <option value="normal">Normal</option>
                 </select>
             </div>
             <div>
-                <label for="valorDeclarado">Valor Declarado ($):</label> <!-- Ponemos el texto para el campo de valor declarado -->
-                <input type="number" id="valorDeclarado" name="valorDeclarado" required> <!-- Hacemos un campo numérico para que el usuario escriba el valor del paquete -->
+                <label for="valorDeclarado">Valor Declarado ($):</label>
+                <input type="number" id="valorDeclarado" name="valorDeclarado" required>
             </div>
-            <button type="button" onclick="calcularCosto()">Calcular Costo</button> <!-- Ponemos un botón que calculará el costo cuando se haga clic -->
+            <button type="button" onclick="calcularCosto()">Calcular Costo</button>
+            <button type="button" onclick="mostrarCotizaciones()">Ver Cotizaciones Anteriores</button>
         </form>
-        <div id="resultado"></div> <!-- Hacemos un espacio donde se mostrará el resultado -->
+        <div id="resultadoCosto"></div>
+        <div id="cotizacionesAnteriores"></div>
     </main>
-    <script src="./js/index.js"></script> <!-- Enlazamos el archivo JavaScript -->
+    <script src="./js/index.js"></script>
 </body>
 </html>
-
