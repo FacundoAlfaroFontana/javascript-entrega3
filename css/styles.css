@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif; /* Elejimos el Tipo de letra principal para el texto que sera Arial*/
+    background-color: #9bc9f1; /* colocamos color de fondo azul claro  */
+    color: #333; /* Ponemos un Color gris oscuro para el texto principal */
+}
+
+header {
+    background-color: #ffffff; /* Ponemos color de fondo blanco para el encabezado */
+    color: rgb(174, 255, 82); /* Ponemos color del texto del encabezado con un tono verde claro tirando a amarillo */
+    text-align: center; /* Colocamos el Texto centrado */
+    padding: 1em 0; /* Ponemos un Espacio de relleno */
+}
+
+.header-content {
+    display: flex; /* Diseñamos el contenido del encabezado */
+    align-items: center; /* Alineamos los ítems del contenedor flex en el centro verticalmente */
+    justify-content: center; /* Alineamos los ítems del contenedor flex en el centro horizontalmente */
+    margin-bottom: 1em; /* Incertamos un margen inferior al contenido del encabezado */
+}
+
+.video-logo {
+    width: 90px; /* Ancho de 90px para el video que contine el logo*/
+    height: 90px; /* Altura de 90px para el video que contiene el logo */
+    margin-right: 1em; /* Colocamos un margen a la derecha  */
+}
+
+.company-name h2,
+.company-name h3 {
+    margin: 0; /* Eliminamos el margen de los elementos h2 y h3 dentro de .company-name */
+}
+
+.company-name {
+    text-align: left; /* Alineamos el texto dentro de .company-name a la izquierda */
+}
+
+form {
+    background-color: #e6f7ff; /* Ponemos un color de fondo azul claro para el formulario */
+    border-radius: 10px; /* Le damos esquinas redondeadas al formulario con un radio de 10 píxeles */
+    margin: 2em auto; /* Añadimos un margen arriba y abajo y centramos el formulario horizontalmente */
+    padding: 2em; /* Añadimos un relleno dentro del formulario */
+    max-width: 500px; /* Fijamos que el ancho maximo del formulario sea de 500px */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Simulamos una sombra del formulario */
+}
+
+form div {
+    margin-bottom: 1em; /* Ponemos un margen inferior a los divs dentro del formulario */
+}
+
+label {
+    display: block; /* Hacemos que el label sea un elemento de bloque */
+    margin-bottom: 0.5em; /* Ponemos un margen inferior al label */
+    color: #0066cc; /* Elejimos un color azul tirando a celeste para el texto del label  */
+}
+
+input, select, button {
+    width: 100%; /* hacemos que los input, select, button ocupen el 100% del conteneodor */
+    padding: 0.5em; /* le damos un relleno a estos elementos */
+    margin-top: 0.5em; /* Ponemos un margen superior a estos elementos */
+    border: 1px solid #ccc; /* Ponemos un borde gris claro alrededor de estos elementos */
+    border-radius: 5px; /* Le damos esquinas redondeadas de 5 píxeles a estos elementos */
+}
+
+button {
+    background-color: #33cc33; /* Color verde de fondo del boton*/
+    color: white; /* El color de letra del boton es blanca */
+    border: none; /* Sacamos los bordes */
+    cursor: pointer; /* Se cambia la forma del mouse al pasar por el boton */
+}
+
+button:hover {
+    background-color: #28a745; /* Se cambia el color de fondo del botón a un tono más oscuro de verde cuando se pasa el mouse por encima */
+}
+
+#resultado {
+    margin-top: 2em; /* Añadimos un margen superior al elemento con el id 'resultado' */
+    text-align: center; /* Centramos el texto dentro de este elemento */
+    font-size: 1.2em; /* Aumenta el tamaño de la fuente para este elemento */
+}

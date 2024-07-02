@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotizador de Envíos</title> <!-- Ponemos el título de la página -->
+    <link rel="stylesheet" href="./css/styles.css"> <!-- Enlazamos el archivo de estilos -->
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <video class="video-logo" autoplay loop muted> <!-- Ponemos un video que se reproduce solo, sin sonido y en bucle -->
+                <source src="./assets/videologo.mp4" type="video/mp4"> <!-- Le damos la ruta del video -->
+                Tu navegador no soporta el elemento de video. <!-- Mostramos un mensaje si el navegador no puede reproducir el video -->
+            </video>
+            <div class="company-name">
+                <h2>Logística y Transporte</h2> <!-- Ponemos el tipo de empresa -->
+                <h3>Alfaro e hijos</h3> <!-- Ponemos el nombre de la empresa -->
+            </div>
+        </div>
+        <h1>Cotizador de Envíos</h1> <!-- Ponemos el título principal de la página -->
+    </header>
+    <main>
+        <form id="cotizadorForm">
+            <div>
+                <label for="origen">Origen:</label> <!-- Ponemos el texto para el campo de origen -->
+                <input type="text" id="origen" name="origen" required> <!-- Hacemos un campo de texto para que el usuario escriba el origen -->
+            </div>
+            <div>
+                <label for="destino">Destino:</label> <!-- Ponemos el texto para el campo de destino -->
+                <input type="text" id="destino" name="destino" required> <!-- Hacemos un campo de texto para que el usuario escriba el destino -->
+            </div>
+            <div>
+                <label for="dimensiones">Dimensiones (Largo x Ancho x Alto en cm):</label> <!-- Ponemos el texto para el campo de dimensiones -->
+                <input type="text" id="dimensiones" name="dimensiones" placeholder="Ej: 30x20x15" required> <!-- Hacemos un campo de texto para que el usuario escriba las dimensiones del paquete -->
+            </div>
+            <div>
+                <label for="peso">Peso (kg):</label> <!-- Ponemos el texto para el campo de peso -->
+                <input type="number" id="peso" name="peso" required> <!-- Hacemos un campo numérico para que el usuario escriba el peso del paquete -->
+            </div>
+            <div>
+                <label for="usuario">Usuario:</label> <!-- Ponemos el texto para el campo de usuario -->
+                <input type="text" id="usuario" name="usuario" required> <!-- Hacemos un campo de texto para que el usuario escriba su nombre -->
+            </div>
+            <div>
+                <label for="dni">DNI:</label> <!-- Ponemos el texto para el campo de DNI -->
+                <input type="text" id="dni" name="dni" required> <!-- Hacemos un campo de texto para que el usuario escriba su DNI -->
+            </div>
+            <div>
+                <label for="tipoEnvio">Tipo de Envío:</label> <!-- Ponemos el texto para el campo de tipo de envío -->
+                <select id="tipoEnvio" name="tipoEnvio" required> <!-- Hacemos un menú desplegable para que el usuario elija el tipo de envío -->
+                    <option value="expreso">Expreso</option> <!-- Ponemos la opción de envío expreso -->
+                    <option value="urgente">Urgente</option> <!-- Ponemos la opción de envío urgente -->
+                    <option value="normal">Normal</option> <!-- Ponemos la opción de envío normal -->
+                </select>
+            </div>
+            <div>
+                <label for="valorDeclarado">Valor Declarado ($):</label> <!-- Ponemos el texto para el campo de valor declarado -->
+                <input type="number" id="valorDeclarado" name="valorDeclarado" required> <!-- Hacemos un campo numérico para que el usuario escriba el valor del paquete -->
+            </div>
+            <button type="button" onclick="calcularCosto()">Calcular Costo</button> <!-- Ponemos un botón que calculará el costo cuando se haga clic -->
+        </form>
+        <div id="resultado"></div> <!-- Hacemos un espacio donde se mostrará el resultado -->
+    </main>
+    <script src="./js/index.js"></script> <!-- Enlazamos el archivo JavaScript -->
+</body>
+</html>
+
