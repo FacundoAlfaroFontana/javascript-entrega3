@@ -1,14 +1,94 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #9bc9f1;
-    color: #333;
+/* Variables de colores */
+:root {
+    --primary-color: #0066cc;
+    --secondary-color: #33cc33;
+    --secondary-hover-color: #28a745;
+    --background-color: #f4f7f9;
+    --header-background-color: #ffffff;
+    --header-text-color: #4caf50;
+    --form-background-color: #ffffff;
+    --form-border-color: #e0e0e0;
+    --input-border-color: #cccccc;
+    --input-focus-border-color: #0066cc;
+    --text-color: #333;
 }
 
+/* Tipografía */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Aplicar animaciones */
 header {
-    background-color: #ffffff;
-    color: rgb(174, 255, 82);
+    animation: slideInFromTop 1s ease-out;
+}
+
+form {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.encabezado-alfaro {
+    animation: slideInFromLeft 1.5s ease-out;
+}
+
+.video-alfaro {
+    animation: slideInFromRight 1.5s ease-out;
+}
+
+/* Encabezado */
+header {
+    background-color: var(--header-background-color);
+    color: var(--header-text-color);
     text-align: center;
     padding: 1em 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .encabezado-alfaro {
@@ -19,8 +99,8 @@ header {
 }
 
 .video-alfaro {
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
     margin-right: 1em;
 }
 
@@ -33,13 +113,15 @@ header {
     text-align: left;
 }
 
+/* Formulario */
 form {
-    background-color: #e6f7ff;
+    background-color: var(--form-background-color);
+    border: 1px solid var(--form-border-color);
     border-radius: 10px;
     margin: 2em auto;
     padding: 2em;
     max-width: 500px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 form div {
@@ -49,30 +131,60 @@ form div {
 label {
     display: block;
     margin-bottom: 0.5em;
-    color: #0066cc;
+    color: var(--primary-color);
 }
 
 input, select, button {
     width: 100%;
-    padding: 0.5em;
+    padding: 0.75em;
     margin-top: 0.5em;
-    border: 1px solid #ccc;
+    border: 1px solid var(--input-border-color);
     border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+input:focus, select:focus {
+    border-color: var(--input-focus-border-color);
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 102, 204, 0.5);
 }
 
 button {
-    background-color: #33cc33;
+    background-color: var(--secondary-color);
     color: white;
     border: none;
     cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #28a745;
+    background-color: var(--secondary-hover-color);
 }
 
+/* Resultados */
 #resultadoCosto, #cotizacionesAnteriores {
     margin-top: 2em;
     text-align: center;
     font-size: 1.2em;
+    padding: 1em;
+    background-color: var(--form-background-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Medios y consultas */
+@media (max-width: 600px) {
+    .encabezado-alfaro {
+        flex-direction: column;
+    }
+
+    .video-alfaro {
+        margin-bottom: 1em;
+    }
+
+    form {
+        padding: 1em;
+    }
 }

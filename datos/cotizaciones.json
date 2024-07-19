@@ -1,0 +1,24 @@
+[
+    {
+        "origenEnvio": "Buenos Aires",
+        "destinoEnvio": "Córdoba",
+        "dimensionesPaquete": "30x20x15",
+        "pesoPaquete": 2,
+        "nombreUsuario": "Juan Perez",
+        "dniUsuario": "12345678",
+        "tipoEnvio": "expreso",
+        "valorDeclarado": 1000,
+        "costoBase": 50
+    },
+    {
+        "origenEnvio": "Rosario",
+        "destinoEnvio": "Mendoza",
+        "dimensionesPaquete": "40x30x20",
+        "pesoPaquete": 5,
+        "nombreUsuario": "Maria Lopez",
+        "dniUsuario": "87654321",
+        "tipoEnvio": "urgente",
+        "valorDeclarado": 2000,
+        "costoBase": 120
+    }
+]

@@ -25,7 +25,11 @@ function calcularCosto() {
         }
         costoBase += volumen * 0.001;
     } else {
-        alert("Las dimensiones deben ser en el formato Largo x Ancho x Alto en cm, por ejemplo, 30x20x15.");
+        Swal.fire({
+            icon: 'error',
+            title: 'Error en las dimensiones',
+            text: 'Las dimensiones deben ser en el formato Largo x Ancho x Alto en cm, por ejemplo, 30x20x15.'
+        });
         return;
     }
 
@@ -68,6 +72,43 @@ function mostrarCotizaciones() {
 
     if (cotizaciones.length === 0) {
         cotizacionesDiv.innerHTML = '<p>No hay cotizaciones anteriores.</p>';
+    } else {
+        cotizacionesDiv.innerHTML = cotizaciones.map(cotizacion => `
+            <div class="cotizacion">
+                <p><strong>Origen:</strong> ${cotizacion.origenEnvio}</p>
+                <p><strong>Destino:</strong> ${cotizacion.destinoEnvio}</p>
+                <p><strong>Dimensiones:</strong> ${cotizacion.dimensionesPaquete}</p>
+                <p><strong>Peso:</strong> ${cotizacion.pesoPaquete} kg</p>
+                <p><strong>Usuario:</strong> ${cotizacion.nombreUsuario}</p>
+                <p><strong>DNI:</strong> ${cotizacion.dniUsuario}</p>
+                <p><strong>Tipo de Envío:</strong> ${cotizacion.tipoEnvio}</p>
+                <p><strong>Valor Declarado:</strong> $${cotizacion.valorDeclarado}</p>
+                <p><strong>Costo Total:</strong> $${cotizacion.costoBase.toFixed(2)}</p>
+            </div>
+        `).join('');
+    }
+}
+
+function cargarCotizaciones() {
+    fetch('../datos/cotizaciones.json')
+        .then(response => response.json())
+        .then(data => {
+            mostrarCotizacionesDesdeJson(data);
+        })
+        .catch(error => {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error al cargar el JSON',
+                text: error.message
+            });
+        });
+}
+
+function mostrarCotizacionesDesdeJson(cotizaciones) {
+    const cotizacionesDiv = document.getElementById('cotizacionesAnteriores');
+
+    if (cotizaciones.length === 0) {
+        cotizacionesDiv.innerHTML = '<p>No hay cotizaciones en el JSON.</p>';
     } else {
         cotizacionesDiv.innerHTML = cotizaciones.map(cotizacion => `
             <div class="cotizacion">

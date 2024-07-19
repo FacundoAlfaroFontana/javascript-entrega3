@@ -1,0 +1,363 @@
+body {
+    background: linear-gradient(to right, rgba(149, 93, 255, 0.337254902), rgba(81, 150, 255, 0.431372549), rgba(0, 47, 255, 0.4039215686), rgba(149, 93, 255, 0.337254902));
+  }
+  
+  #background-container {
+    background-color: #015bbb !important;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    margin-top: 50px;
+    min-height: 200px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  #table-container {
+    width: 100%;
+  }
+  #table-container h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  #table-container h5 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  #table-container table {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #accordion-container {
+    width: 100%;
+    text-align: center;
+  }
+  #accordion-container h3 {
+    color: white;
+  }
+  
+  .navbar-nav .nav-link {
+    text-align: center;
+  }
+  .navbar-nav .nav-link:hover {
+    background-color: #ffffff;
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  .services h2 {
+    color: #000000;
+  }
+  .services p {
+    color: #000000;
+  }
+  .services .card {
+    margin-bottom: 20px;
+  }
+  
+  .about-text {
+    color: rgb(0, 0, 0) !important;
+  }
+  
+  #imagcontacto {
+    margin-top: 60px;
+  }
+  
+  #seccionservicios {
+    margin-top: 40px;
+  }
+  
+  #parrafoss {
+    color: #ffffff;
+  }
+  
+  .footer {
+    margin-top: 20px;
+  }
+  
+  #mapa {
+    height: 500px;
+  }
+  
+  #portfolio h2 {
+    color: rgb(27, 27, 27);
+  }
+  #portfolio p {
+    color: rgb(27, 27, 27);
+  }
+  
+  .portfolio .row .col-12 {
+    margin-top: 20px;
+  }
+  
+  .btn-black {
+    border-color: white;
+  }
+  .btn-black:hover {
+    border-color: white;
+  }
+  
+  #formulario_contactos {
+    background-color: rgba(0, 0, 0, 0.678);
+    color: white;
+  }
+  
+  .info-section {
+    background-color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  #login-card {
+    background-color: rgba(8, 8, 8, 0.726) !important;
+    color: white !important;
+    padding: 20px !important;
+    border-radius: 10px !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) !important;
+    margin-top: 10px !important;
+  }
+  
+  #login-title {
+    text-align: center;
+  }
+  
+  #login-form input[type=text],
+  #login-form input[type=password] {
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  #login-form button {
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: #141414;
+  }
+  
+  #container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -30px;
+    margin-bottom: calc(100px + -30px);
+  }
+  
+  #video-container {
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+  }
+  #video-container video {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .index {
+    flex-basis: 20%;
+    padding-right: 20px;
+    margin-top: 100px;
+  }
+  
+  .content {
+    flex-basis: 75%;
+  }
+  
+  .container-box {
+    background-color: #141414;
+    color: rgba(255, 255, 255, 0.7803921569);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  
+  #art2 {
+    margin-top: 10px;
+  }
+  
+  #art3 {
+    margin-top: 10px;
+  }
+  
+  .novedad {
+    margin-bottom: 50px;
+  }
+  
+  #contnosotros {
+    margin-top: 60px;
+  }
+  
+  #login-container {
+    max-width: 400px;
+    margin: auto;
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #015bbb;
+    text-align: center;
+  }
+  
+  .video-area {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    padding-top: 56.25%;
+  }
+  .video-area video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .index-grid {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  .index-grid a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #015bbb;
+  }
+  .index-grid a:hover {
+    background-color: #ffffff;
+    color: #015bbb;
+  }
+  
+  #tituloindice {
+    text-align: center;
+    margin-top: 60px;
+  }
+  
+  .tituloo {
+    margin-top: 70px;
+    text-align: center;
+  }
+  
+  .accordion-button {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .accordion-body {
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  
+  #tablaProcesoEnvio {
+    background-color: #f2f2f2;
+  }
+  
+  #formularioenvio {
+    margin-top: 50px;
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+    .index {
+      flex-basis: 100%;
+      padding-right: 0;
+      text-align: center;
+    }
+    .content {
+      flex-basis: 100%;
+      padding-right: 0;
+      text-align: center;
+    }
+    .container-box {
+      width: 100vw;
+      margin-right: 0;
+      margin-bottom: 10px;
+      background-color: #141414;
+      color: rgba(255, 255, 255, 0.7803921569);
+    }
+  }
+  @media screen and (max-width: 320px) {
+    #carouselE {
+      margin-top: 70px;
+    }
+    .carousel-caption h5 {
+      font-size: 14px;
+    }
+    .carousel-caption p {
+      font-size: 14px;
+    }
+    .carousel-caption .btn {
+      padding: 5px 10px;
+      font-size: 12px;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .index-grid {
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+      padding: 10px;
+    }
+    .index-grid a {
+      font-size: 12px;
+    }
+  }
+  .gradient-button {
+    background: linear-gradient(to bottom, #4eb5f1, #2a8cd7);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 1s;
+  }
+  .gradient-button:hover {
+    background: linear-gradient(to bottom, #2a8cd7, #4eb5f1);
+    transition: all 0.5s;
+    transform: scale(0.9);
+  }
+  
+  .gradient-button {
+    background: linear-gradient(to bottom, #4eb5f1, #2a8cd7);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 1s;
+  }
+  .gradient-button:hover {
+    background: linear-gradient(to bottom, #2a8cd7, #4eb5f1);
+    transition: all 0.5s;
+    transform: scale(0.9);
+  }

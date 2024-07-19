@@ -3,67 +3,313 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cotizador de Envíos Alfaro</title>
-    <link rel="stylesheet" href="./css/estilosAlfaro.css">
+    <meta name="keywords" content="logistica, transporte, cargas,camiones, transporte Alfaro, paqueteria, envios">
+    <meta name="description" content="Transporte Alfaro brinda servicio de calidad para cargas completas o paqueteria garantizando transparencia y atencion 24hrs ">
+    <title>Transporte Alfaro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body>
-    <header>
-        <div class="encabezado-alfaro">
-            <video class="video-alfaro" autoplay loop muted>
-                <source src="./assets/videologo.mp4" type="video/mp4">
-                Tu navegador no soporta el elemento de video, pasate a un navegador mas mejor XD.
-            </video>
-            <div class="nombre-empresa">
-                <h2>Logística y Transporte</h2>
-                <h3>Alfaro e Hijos</h3>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">        
+        <div>
+            <a class="navbar-brand" href="#">
+                <img src="./assets/logo.png" alt="" style="width:100px;" class="rounded-pill"> 
+            </a>
+        </div>
+        <!-- Botón del menú -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarS"
+            aria-controls="navbarS" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Contenido de la barra de navegación -->
+        <div class="collapse navbar-collapse" id="navbarS">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a href="./index.html" class="nav-link"><i class="bi bi-house-door"></i> Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="bi bi-geo-alt"></i> Sucursales</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="bi bi-person"></i> Sobre
+                        Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="bi bi-building"></i> Empresas</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./pages/cotizador.html" class="nav-link"><i class="bi bi-calculator"></i> Cotizar
+                        Envío</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="bi bi-truck"></i> Seguir Envío</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+
+    <!-- INICIO DE CARRUSEL -->
+    <div id="carouselE" class="carousel slide" data-bs-ride="carousel" style="margin-top: 110px;">
+
+        <!-- botones para cambiar de imágenes -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselE" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselE" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselE" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <!-- imágenes y descripciones para el carrusel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./assets/pexels-kevin-bidwell-2348359.jpg" class="d-block w-100" alt="" style="max-height: 600px;">
+                <div class="carousel-caption" style="background-color: rgba(0, 0, 0, 0.486);">
+                    <h5>Listos para el Transporte</h5>
+                    <p>Nuestra Flota de Camiones y Conductores a su Servicio</p>
+                    <a href="./pages/sobrenosotros.html#art1" class="btn btn-primary mt-3">Sobre Nosotros</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/pexels-photoscom-93398.jpg" class="d-block w-100" alt="" style="max-height: 600px;">
+                <div class="carousel-caption" style="background-color: rgba(0, 0, 0, 0.486);">
+                    <h5>Entrega Garantizada</h5>
+                    <p>Conectando Cada Rincón con Nuestra Red de Distribución</p>
+                    <a href="./pages/sobrenosotros.html#art1" class="btn btn-primary mt-3">Sobre Nosotros</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/pexels-quintin-gellar-2199293.jpg" class="d-block w-100" alt="" style="max-height: 600px;">
+                <div class="carousel-caption" style="background-color: rgba(0, 0, 0, 0.486);">
+                    <h5>Horizontes en Movimiento</h5>
+                    <p>Nuestra Flota Avanzando hacia un Futuro Prometedor</p>
+                    <a href="./pages/sobrenosotros.html#art1" class="btn btn-primary">Sobre Nosotros</a>
+                </div>
             </div>
         </div>
-        <h1>Cotizador de Envíos Alfaro</h1>
-    </header>
-    <main>
-        <form id="formularioEnvio">
-            <div>
-                <label for="origenEnvio">Origen:</label>
-                <input type="text" id="origenEnvio" name="origenEnvio" required>
+
+        <!-- botones para retroceder o avanzar de imágenes con los iconos <> -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselE" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselE" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+    </div>
+    <!-- FINAL DEL CARRUSEL -->
+
+    <!-- ------------------------------------------------------- -->
+
+    <!-- INICIA SECCION DE SERVICIOS -->
+    <section id="seccionservicios" class="services section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center text-white pb-5">
+                        <h2>Últimas Novedades: Mantente al Día con Nuestro Servicio de Transporte de Cargas y Paquetes
+                        </h2>
+                        <p class="lead">
+                            Explora nuestra sección de noticias para estar al tanto de las últimas actualizaciones,
+                            promociones especiales, consejos de envío y eventos relacionados con nuestro servicio de
+                            transporte de cargas y paquetes. Desde nuevas rutas hasta tecnologías innovadoras, aquí
+                            encontrarás todo lo que necesitas para optimizar tus envíos y mantener tu negocio en
+                            movimiento. ¡No te pierdas ninguna novedad y suscríbete para recibir las últimas noticias
+                            directamente en tu bandeja de entrada
+                        </p>
+                        <a href="./pages/sobrenosotros.html#art3" class="btn btn-primary">Ultimas Novedades</a>
+                    </div>
+                </div>
             </div>
-            <div>
-                <label for="destinoEnvio">Destino:</label>
-                <input type="text" id="destinoEnvio" name="destinoEnvio" required>
+            <div class="row">
+                <div class="col-12 col-md-12 col-12">
+                    <div class="card text-white text-center bg-dark pb-2">
+                        <div class="card-body">
+                            <h3 class="card-title">Contacto</h3>
+                            <div id="contact-info" class="d-flex justify-content-center align-items-center">
+                                <div class="me-3">
+                                    <i class="bi bi-telephone-fill"></i>
+                                    <span>Teléfono: +123456789</span>
+                                </div>
+                                <div>
+                                    <i class="bi bi-envelope-fill"></i>
+                                    <span>Email: ejemplo@mail.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-12 col-12">
+                    <div class="card text-white text-center bg-dark pb-2">
+                        <div class="card-body">
+                            <h3 class="card-title">Redes sociales</h3>
+                            <div id="social-buttons" class="d-flex flex-wrap justify-content-center align-items-center">
+                                <button type="button" class="btn btn-dark btn-outline-light mb-2 me-2">
+                                    <i class="bi bi-twitter-x"></i> Twitter
+                                </button>
+                                <button type="button" class="btn btn-danger mb-2 me-2">
+                                    <i class="bi bi-instagram"></i> Instagram
+                                </button>
+                                <button type="button" class="btn btn-success mb-2 me-2">
+                                    <i class="bi bi-whatsapp"></i> WhatsApp
+                                </button>
+                                <button type="button" class="btn btn-info mb-2 me-2">
+                                    <i class="bi bi-telegram"></i> Telegram
+                                </button>
+                                <button type="button" class="btn btn-primary mb-2">
+                                    <i class="bi bi-facebook"></i> Facebook
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-12 col-12">
+                    <div class="card text-white text-center bg-dark pb-2">
+                        <div class="card-body">
+                            <h3 class="card-title">Formulario de Contacto</h3>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label">Nombre</label>
+                                    <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="correo" class="form-label">Correo electrónico</label>
+                                    <input type="email" class="form-control" id="correo"
+                                        placeholder="nombre@ejemplo.com">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="mensaje" class="form-label">Mensaje</label>
+                                    <textarea class="form-control" id="mensaje" rows="3"
+                                        placeholder="Escriba su mensaje aquí"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <label for="dimensionesPaquete">Dimensiones (Largo x Ancho x Alto en cm):</label>
-                <input type="text" id="dimensionesPaquete" name="dimensionesPaquete" placeholder="Ej: 30x20x15" required>
+        </div>
+    </section>
+    <!-- FIN SECCION DE SERVICIOS -->
+
+    <!-- ----------------------------------------------------- -->
+
+    <!-- INICIA SECCION PORFOLIO -->
+    <section class="portfolio section-padding">
+        <div class="container">
+            <div id="portfolio" class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center text-white pb-5">
+                        <h2>Un Servicio Confiable</h2>
+                        <p>
+                            A continuación podrás observar características que nos distinguen
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div>
-                <label for="pesoPaquete">Peso (kg):</label>
-                <input type="number" id="pesoPaquete" name="pesoPaquete" required>
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-light text-center bg-dark pb-2">
+                        <div class="card-body text-white">
+                            <div class="img-area mb-4">
+                                <img src="./assets/paquetesdescarga.png" class="img-fluid" alt="">
+                            </div>
+                            <h3>Un Servicio Confiable</h3>
+                            <p class="lead">
+                                Transporte Alfaro, una empresa emergente comprometida con la excelencia, te ofrece un
+                                servicio de paquetería confiable y seguro. Nuestro equipo está dedicado a garantizar que
+                                tus paquetes lleguen a su destino de manera puntual y en perfecto estado. Desde el
+                                primer envío, nos esforzamos por ganarnos tu confianza y satisfacción. Puedes estar
+                                tranquilo sabiendo que tus envíos están en buenas manos.
+                            </p>
+                            <a href="./pages/sobrenosotros.html#art1" class="btn btn-primary">Mas Informacion</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-light text-center bg-dark pb-2">
+                        <div class="card-body text-white">
+                            <div class="img-area mb-4">
+                                <img src="./assets/mercanciaasegurada.jpg" class="img-fluid" alt="">
+                            </div>
+                            <h3>Tranquilidad Garantizada</h3>
+                            <p class="lead">
+                                En Transporte Alfaro, comprendemos la importancia de proteger tus envíos. Es por eso que
+                                todos nuestros servicios incluyen un seguro integral para la mercancía que
+                                transportamos. Desde el momento en que confías tus paquetes en nuestras manos, puedes
+                                estar seguro de que estarán protegidos contra cualquier eventualidad en el camino. Con
+                                Transporte Alfaro, tu tranquilidad es nuestra prioridad número uno.
+                            </p>
+                            <a href="./pages/sobrenosotros.html#art2" class="btn btn-primary">Mas Informacion</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-light text-center bg-dark pb-2">
+                        <div class="card-body text-white">
+                            <div class="img-area mb-4">
+                                <img src="./assets/acuerdosempresariales (2).jpg" class="img-fluid" alt="">
+                            </div>
+                            <h3>Cotizaciones a tu Medida</h3>
+                            <p class="lead">
+                                "¿Quieres reducir tus costos de envío? En Transporte Alfaro comprendemos la necesidad de
+                                reducir costos en las empresas por eso ofrecemos un programa especial para empresas como
+                                la tuya. Presentando un comprobante de otra empresa de transporte, puedes acceder a
+                                precios exclusivos y ahorros significativos en tus envíos. ¿Te interesa saber más?
+                                Obtené más información y comenzá a ahorrar a partir de tu siguiente envío!
+                            </p>
+                            <a href="./pages/empresas.html" class="btn btn-primary">Mas Informacion</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <label for="nombreUsuario">Usuario:</label>
-                <input type="text" id="nombreUsuario" name="nombreUsuario" required>
+        </div>
+    </section>
+    <!-- FIN SECCION PORFOLIO -->
+
+    <!-- ------------------------------------------------------- -->
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline mb-0">
+                        <!-- Iconos de redes sociales -->
+                        <li class="list-inline-item">
+                            <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="social-icon"><i class="bi bi-whatsapp"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="social-icon"><i class="bi bi-telegram"></i></a>
+                        </li>
+                    </ul>
+                    <p class="mt-3">© 2024 Facundo Alfaro. Todos los derechos reservados.</p>
+                </div>
             </div>
-            <div>
-                <label for="dniUsuario">DNI:</label>
-                <input type="text" id="dniUsuario" name="dniUsuario" required>
-            </div>
-            <div>
-                <label for="tipoEnvio">Tipo de Envío:</label>
-                <select id="tipoEnvio" name="tipoEnvio" required>
-                    <option value="expreso">Expreso</option>
-                    <option value="urgente">Urgente</option>
-                    <option value="normal">Normal</option>
-                </select>
-            </div>
-            <div>
-                <label for="valorDeclarado">Valor Declarado ($):</label>
-                <input type="number" id="valorDeclarado" name="valorDeclarado" required>
-            </div>
-            <button type="button" onclick="calcularCosto()">Calcular Costo</button>
-            <button type="button" onclick="mostrarCotizaciones()">Ver Cotizaciones Anteriores</button>
-        </form>
-        <div id="resultadoCosto"></div>
-        <div id="cotizacionesAnteriores"></div>
-    </main>
-    <script src="./js/index.js"></script>
+        </div>
+    </footer>
+    <!-- Fin Footer -->
+
+    <!--script de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
